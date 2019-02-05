@@ -1,0 +1,35 @@
+<% include ./partials/header %> 
+
+<div class="ui main text container segment" id="showPage">
+    
+       <div class="ui center aligned huge header"><%=blogAgain.title %></div>
+    
+    <div class="ui top attatched">
+        <!---->
+        <div class="item">
+                   <img class="ui large image" id="showImage" src="<%=blogAgain.image%>" >
+        </div>
+        <!---->
+        <div style="margin-bottom: 20px !important;font-weight :bold " class="content">
+                 <span>Posted: <%= blogAgain.created.toDateString()%></span>
+                 <!--peep how the date string method turns those computer dates normal-->
+        </div>
+        <!---->
+        <div id="showDesc" class="description">
+                   <p><%-blogAgain.body%></p> 
+        </div>
+        <!---->
+        <a class="ui button" href="/blogs/<%=blogAgain._id%>/edit">Edit</a>
+        <!---->
+        <form id="delete" method="POST" action="/blogs/<%=blogAgain._id%>?_method=DELETE">
+            <!--even tho this is technically a post request, the metod ovveride sees this as a delete request-->
+             <button class="ui red button">Delete</button>
+        </form>
+        <!---->
+    </div>
+</div>
+
+
+
+
+<%include ./partials/footer %>

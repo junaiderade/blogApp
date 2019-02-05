@@ -1,0 +1,94 @@
+i { 
+    /*this means icons with a class of icon*/
+    font-size: 1em !important;
+    /*you did some trouble shooting and found that u needed !important because it'll give ur code priotity over the framework*/
+    /*the framework in this project is semantic ui*/
+}
+
+
+#delete {
+    display: inline !important;
+}
+
+h1 {
+    margin: 25px auto !important;
+}
+
+body {
+    background-color: steelblue !important;
+}
+
+.segment {
+    background-color: Lavender !important;
+    border-color: black !important;
+    border-width: thick !important;
+}
+
+#BlogTitle {
+    font-family: Impact !important;
+    background-color: steelblue !important;
+    /*color: lavender !important;*/
+    border-style: solid;
+    border-color: black !important;
+    border-width: thick !important;
+}
+
+#BlogDesc {
+    font-family: impact !important;
+    background-color: white !important;
+    font-size: 1.2em !important;
+}
+
+.description {
+    margin-bottom: 1.5em !important;
+}
+
+.image {
+    margin-left: 6.5em !important;
+}
+
+#indexHeader {
+      font-size: 450% !important;
+      font-family: 'Staatliches', cursive !important;
+      color: steelblue !important;
+      border-style: solid !important;
+      margin-top: .6em !important;
+      border-color: Black !important;
+      border-bottom-width: thick;
+      background-color: lavender;
+}
+
+#postImage {
+    border-style: solid !important;
+    border-color: black !important;
+    border-width: thick !important;
+}
+
+#newPost {
+    padding-top: 70px !important;
+}
+
+#showPage {
+        padding-top: 70px !important;
+}
+
+#showImage {
+    border-style: solid !important;
+    border-color: black !important;
+    border-width: thick !important;
+    margin-bottom: 50px !important; 
+    
+}
+
+#showDesc {
+    border-style: solid !important;
+    border-color: black !important;
+    padding: 10px !important;
+}
+
+.swag {
+    border-style: solid !important;
+    border-color: black !important;
+    border-width: thick !important;
+    /*padding-bottom: 0px !important;*/
+}

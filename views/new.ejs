@@ -1,0 +1,35 @@
+<% include ./partials/header %> 
+
+<div class ="ui main text container segment" id="newPost">
+    <div class="ui huge header">New Blog</div>
+    
+<!--FORM-->
+    <form class= "ui form" action="/blogs" method="POST">
+        
+        <div class="field">
+            <label>Title</label>
+           <input type="text" name="blog[title]" placeholder="title">
+        </div>
+        
+        <div class="field">
+            <label>Image</label>
+           <input type="text" name="blog[image]" placeholder="image url">
+        </div>
+        
+       <div class="field">
+            <label>Blog Content</label>
+            <textarea name="blog[body]" placeholder="body of post" required></textarea>
+       </div>
+         <!--blog holds title image and body. so u can do request.blog-->
+        
+<!--BUTTON U COPIED and edited FROM SEMANTIC UI WEBSITE-->
+       <input class="ui primary button" type="submit">
+       
+
+    </form> 
+    
+</div>
+
+
+<%include ./partials/footer %>
+

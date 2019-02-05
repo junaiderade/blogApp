@@ -1,0 +1,71 @@
+<% include ./partials/header %> 
+<!--it knows u r inside views because partials is inside views-->
+<div class="ui center aligned header" id="indexHeader">JUNAID'S WEB DEV BLOG PROJECT! </div>
+
+<div class="ui center aligned header" >P O S T S</div>
+
+<div class="ui main text container"> 
+<div class="ui divider"></div>
+
+
+    <div class="ui top attached segment">
+        
+
+        
+        <div class="ui divided items">
+            <!--with this u get ana utomatic divider between each item-->
+<% blogs1.forEach(function(blog){ %>
+             <div class="items">
+                 
+                 <!--header-->
+                <a href="/blogs/<%= blog._id %>"> 
+                   <h1 class="ui center aligned block header" id="BlogTitle"><%= blog.title %></h1>
+                   <!--you can click the title to go to the post now-->
+                </a> 
+                 
+                <!--image-->
+                 <div class="image">
+                     <img class="ui medium image" id="postImage" src="<%=blog.image%>" >
+                </div>
+                 <!--this will help contain the size of the image so nothing is gigantic-->
+                
+                
+                <div class="content ui padded segment" id="BlogDesc"> 
+                 
+                   
+                <!--description-->
+                <div class="description">
+                       <p><%-blog.body.substring(0,100)%>...</p> 
+                       <!--notice how u use the dash instead of equals sign-->
+                       <!--this will limit the preview to only show the first 100 spaces then ...-->
+                </div>
+                
+                <!--space-->
+                
+                <!--read more-->
+                <div class="extra">
+                       <a class="ui green button" href="/blogs/<%= blog._id %>">Read More</a>
+                </div>
+                
+                <!--date created-->
+                <div class="meta">
+                       <span> Posted: <%=blog.created.toDateString()%> </span>
+                </div>
+                   
+                
+                   
+                </div>
+                
+                <div class="ui divider"></div>
+                 
+       <!--remember that blog here is the one defined in the function-->
+             </div>
+<% }) %>
+
+        </div>
+    </div>
+</div>
+
+
+
+<%include ./partials/footer %>

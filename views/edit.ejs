@@ -1,0 +1,35 @@
+<% include ./partials/header %> 
+
+<div class="ui main text container segment">
+    <div class="ui huge header">Edit "<%=blogOne.title%>"</div>
+    
+<!--FORM-->
+    <form class= "ui form" action="/blogs/<%=blogOne._id%>?_method=PUT" method="POST">
+        
+        <div class="field">
+            <label>Title</label>
+           <input type="text" name="blog[title]" value="<%=blogOne.title%>">
+        </div>
+        
+        <div class="field">
+            <label>Image</label>
+           <input type="text" name="blog[image]" value="<%=blogOne.image%>">
+        </div>
+        
+       <div class="field">
+            <label>Blog Content</label>
+            <textarea name="blog[body]" required><%=blogOne.body%></textarea>
+       </div>
+         <!--blog holds title image and body. so u can do request.blog-->
+        
+<!--BUTTON U COPIED and edited FROM SEMANTIC UI WEBSITE-->
+       <input class="ui primary button" type="submit">
+       
+
+    </form> 
+    
+</div>
+
+
+<%include ./partials/footer %>
+
